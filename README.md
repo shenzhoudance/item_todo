@@ -1,24 +1,24 @@
-# README
+# 基本功能体系
+https://www.youtube.com/watch?v=Z9GaNNztcZk&t=114s
+https://github.com/RyanHemrick/Checklist/blob/master/app/controllers/items_controller.rb
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+cd newspace
+ls
+cd checklist
 
-Things you may want to cover:
+git checkout -b Item
+rails g model Item title:string description:text
+atom .
+rake db:migrate
 
-* Ruby version
+rails g controller Items
+bundle install
+rails generate simple_form:install --bootstrap
 
-* System dependencies
+rails s
+git add .
+git commit -m "add_items"
+git remote add origin https://github.com/shenzhoudance/item_todo.git
+git push origin Item
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+---
